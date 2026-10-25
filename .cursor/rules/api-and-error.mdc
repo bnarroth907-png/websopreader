@@ -1,0 +1,13 @@
+---
+description: API 設計與錯誤處理規範
+alwaysApply: false
+---
+
+# API 與錯誤處理
+
+- 後端 API 回應統一格式：{ code, message, data, traceId }
+- 前端呼叫 API 必須處理：loading、success、業務錯誤、網路錯誤
+- 錯誤訊息必須對使用者友善，技術細節放在 log 或 traceId
+- 所有列表 API 必須支援分頁參數（page, pageSize）與排序
+- 寫入 API 必須做權限與資料範圍校驗（不能只信前端傳來的 ID）
+- 使用統一的錯誤碼規範，不要自創未定義的 code

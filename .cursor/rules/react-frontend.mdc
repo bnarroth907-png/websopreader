@@ -1,0 +1,16 @@
+---
+description: React + TypeScript 前端開發規範
+globs: "**/*.{tsx,ts,jsx,js}"
+alwaysApply: false
+---
+
+# React 前端規範
+
+- 使用函數組件 + Hooks，禁止 class 組件
+- 組件檔案使用 PascalCase，hook 使用 useXxx
+- 頁面放在 app/ 或 pages/（依專案結構），業務組件放在 components/，通用組件放在 components/ui/
+- 優先使用專案已有的設計系統組件（Ant Design 或內部元件庫），不要自己重寫基礎元件
+- 表單優先使用 Ant Design Form 或專案統一的 Form 封裝
+- 列表頁必須支援：載入狀態、空狀態、錯誤狀態、分頁
+- 權限控制：按鈕與選單必須透過 usePermission() 或 <Auth> 組件控制，禁止只靠前端隱藏
+- 狀態管理：簡單狀態用 useState，跨組件用 Context 或專案選定的狀態庫，避免過度使用全域狀態

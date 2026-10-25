@@ -1,0 +1,20 @@
+# Git ignore for SOP Reader
+node_modules/
+.next/
+.DS_Store
+*.log
+.vscode/sftp.json
+.idea/
+*.swp
+*.swo
+.env
+.env.local
+dist/
+build/
+*.tsbuildinfo
+
+# Uploaded files and runtime audit logs (library SOPs are tracked)
+storage/sops/uploads/*
+!storage/sops/uploads/.gitkeep
+storage/logs/*
+!storage/logs/.gitkeep
