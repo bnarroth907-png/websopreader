@@ -6,18 +6,18 @@ interface PdfViewerProps {
 
 export function PdfViewer({ fileUrl }: PdfViewerProps) {
   return (
-    <div className="space-y-3">
+    <div className="flex h-full min-h-0 flex-col">
       <iframe
-        title="PDF preview"
+        title="PDF 預覽"
         src={fileUrl}
-        className="h-[80vh] w-full rounded border border-slate-200 bg-white dark:border-slate-700"
+        className="min-h-0 h-full w-full flex-1 rounded border border-slate-200 bg-white dark:border-slate-700"
       />
       <p className="text-center text-sm text-slate-500">
-        If the preview is blank,{" "}
+        若預覽空白，請
         <a href={fileUrl} target="_blank" rel="noreferrer" className="text-blue-600 underline">
-          open the PDF in a new tab
+          在新分頁開啟 PDF
         </a>
-        .
+        。
       </p>
     </div>
   );
